@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Factories\FlightCompanyFactory;
+use App\Interfaces\FlightCompanyInterface;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -13,7 +15,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->bind(FlightCompanyInterface::class, function() {
+            return FlightCompanyFactory::make(request()->company);
+        });
     }
 
     /**
