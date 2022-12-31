@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body {
+    text-align: center;
+    display: table;
+    margin: 20px auto;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+.main {
+    max-width: 1000px;
+}
+
+.flight-table {
+    border-collapse: collapse;
+}
+
+.flight-table tr:nth-child(even) {
+    background-color: #f0f0f0;
+}
+
+.flight-table th {
+    background-color: #e0e0e0;
+}
+
+.flight-table td,
+th {
+    border: 1px solid #e0e0e0;
+    padding: 1em;
+}
